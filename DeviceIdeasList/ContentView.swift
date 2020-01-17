@@ -27,12 +27,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Add Blog Idea")) {
+                Section(header: Text("Add Device Idea")) {
                     VStack {
                         VStack {
-                            TextField("Idea title", text: self.$newIdeaTitle)
+                            TextField("Device title", text: self.$newIdeaTitle)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                            TextField("Idea description", text: self.$newIdeaDescription)
+                            TextField("Device description", text: self.$newIdeaDescription)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                         }
                         
@@ -57,7 +57,7 @@ struct ContentView: View {
                                     Image(systemName: "plus.circle.fill")
                                         .foregroundColor(.green)
                                         .imageScale(.large)
-                                    Text("Add Idea")
+                                    Text("Add Device")
                                 }
                             }
                             .padding()
@@ -68,15 +68,17 @@ struct ContentView: View {
 
 
 
-                Section(header: Text("Blog Ideas")) {
+                Section(header: Text("Device Ideas")) {
                     // 🚨 The UI doesn't seem to want to update if you update a blog idea more than once.
                     // If you change the ForEach below to ForEach(self.DeviceIdeas, id: \.ideaTitle), it will work,
                     // but this feels "wrong"...
+                    
                     // Josh Hubbard: Everything I've read says that ForEach's need a unique identifier and this is
                     // required. Not sure why it should feel wrong. Should SwiftUI handle this internally and hide
                     // it from the developer? Up for opinion, but quite a few web frameworks work the same way (react
-                    // comes to mind). Regardless, as of right now we need a unique identifier
-                    ForEach(self.DeviceIdeas) { DeviceIdea in
+                    // comes to mind). Regardless, as of right now we need a unique identifier. .self seems to be
+                    // what apple suggests
+                    ForEach(self.DeviceIdeas, id: \.self) { DeviceIdea in
                         NavigationLink(destination: EditView(DeviceIdea: DeviceIdea)) {
                             VStack(alignment: .leading) {
                                 Text(DeviceIdea.deviceTitle ?? "")
@@ -102,7 +104,7 @@ struct ContentView: View {
                 .font(.headline)
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle(Text("Blog Idea List"))
+            .navigationBarTitle(Text("Device Idea List"))
             .navigationBarItems(trailing: EditButton())
         }
     }
