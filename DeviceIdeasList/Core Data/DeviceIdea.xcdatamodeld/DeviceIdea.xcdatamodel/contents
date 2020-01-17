@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="DeviceIdea" representedClassName="DeviceIdea" syncable="YES">
+    <entity name="DeviceIdea" representedClassName=".DeviceIdea" syncable="YES">
         <attribute name="deviceDescription" optional="YES" attributeType="String"/>
         <attribute name="deviceTitle" optional="YES" attributeType="String"/>
     </entity>
