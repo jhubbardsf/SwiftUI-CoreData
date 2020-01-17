@@ -14,6 +14,9 @@
 		03E760CA23D1617A001B1AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E760C923D1617A001B1AA0 /* Assets.xcassets */; };
 		03E760CD23D1617A001B1AA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E760CC23D1617A001B1AA0 /* Preview Assets.xcassets */; };
 		03E760D023D1617A001B1AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E760CE23D1617A001B1AA0 /* LaunchScreen.storyboard */; };
+		03E760DA23D1626C001B1AA0 /* DeviceIdea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03E760D823D1626C001B1AA0 /* DeviceIdea.xcdatamodeld */; };
+		03E760DC23D16343001B1AA0 /* DeviceIdea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E760DB23D16343001B1AA0 /* DeviceIdea.swift */; };
+		03E760DE23D16634001B1AA0 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E760DD23D16634001B1AA0 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		03E760CC23D1617A001B1AA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03E760CF23D1617A001B1AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03E760D123D1617A001B1AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E760D923D1626C001B1AA0 /* DeviceIdea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeviceIdea.xcdatamodel; sourceTree = "<group>"; };
+		03E760DB23D16343001B1AA0 /* DeviceIdea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdea.swift; sourceTree = "<group>"; };
+		03E760DD23D16634001B1AA0 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,11 @@
 		03E760BF23D16178001B1AA0 /* DeviceIdeasList */ = {
 			isa = PBXGroup;
 			children = (
+				03E760D723D1624C001B1AA0 /* Core Data */,
 				03E760C023D16178001B1AA0 /* AppDelegate.swift */,
 				03E760C223D16178001B1AA0 /* SceneDelegate.swift */,
 				03E760C723D16178001B1AA0 /* ContentView.swift */,
+				03E760DD23D16634001B1AA0 /* EditView.swift */,
 				03E760C923D1617A001B1AA0 /* Assets.xcassets */,
 				03E760CE23D1617A001B1AA0 /* LaunchScreen.storyboard */,
 				03E760D123D1617A001B1AA0 /* Info.plist */,
@@ -76,6 +84,15 @@
 				03E760CC23D1617A001B1AA0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03E760D723D1624C001B1AA0 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				03E760D823D1626C001B1AA0 /* DeviceIdea.xcdatamodeld */,
+				03E760DB23D16343001B1AA0 /* DeviceIdea.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +168,11 @@
 			files = (
 				03E760C123D16178001B1AA0 /* AppDelegate.swift in Sources */,
 				03E760C623D16178001B1AA0 /* DeviceIdeasList.xcdatamodeld in Sources */,
+				03E760DC23D16343001B1AA0 /* DeviceIdea.swift in Sources */,
 				03E760C823D16178001B1AA0 /* ContentView.swift in Sources */,
+				03E760DE23D16634001B1AA0 /* EditView.swift in Sources */,
 				03E760C323D16178001B1AA0 /* SceneDelegate.swift in Sources */,
+				03E760DA23D1626C001B1AA0 /* DeviceIdea.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +375,16 @@
 			);
 			currentVersion = 03E760C523D16178001B1AA0 /* DeviceIdeasList.xcdatamodel */;
 			path = DeviceIdeasList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		03E760D823D1626C001B1AA0 /* DeviceIdea.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03E760D923D1626C001B1AA0 /* DeviceIdea.xcdatamodel */,
+			);
+			currentVersion = 03E760D923D1626C001B1AA0 /* DeviceIdea.xcdatamodel */;
+			path = DeviceIdea.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

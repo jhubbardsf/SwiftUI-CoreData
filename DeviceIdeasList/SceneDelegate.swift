@@ -1,9 +1,12 @@
 //
 //  SceneDelegate.swift
-//  DeviceIdeasList
+//  BlogIdeaList-SwiftUI
 //
-//  Created by Josh Hubbard on 1/16/20.
-//  Copyright © 2020 YeetBox. All rights reserved.
+//  Created by Andrew Bancroft on 7/30/19.
+//  Copyright © 2019 Andrew Bancroft. All rights reserved.
+//
+// ❇️ Alerts you to Core Data pieces
+// ℹ️ Alerts you to general info about what my brain was thinking when I wrote the code
 //
 
 import UIKit
@@ -19,17 +22,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Get the managed object context from the shared persistent container.
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-        // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
-        // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, context)
-
-        // Use a UIHostingController as window root view controller.
+        // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
+            
+            // ❇️ Get the managedObjectContext from the persistent container
+            let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            // ❇️ Pass it to the ContentView through the managedObjectContext @Environment variable
+            let contentView = ContentView()
+                                .environment(\.managedObjectContext, managedObjectContext)
+            
             window.rootViewController = UIHostingController(rootView: contentView)
+            
             self.window = window
             window.makeKeyAndVisible()
         }
