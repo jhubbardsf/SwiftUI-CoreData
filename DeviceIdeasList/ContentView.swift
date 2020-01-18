@@ -69,16 +69,7 @@ struct ContentView: View {
 
 
                 Section(header: Text("Device Ideas")) {
-                    // 🚨 The UI doesn't seem to want to update if you update a blog idea more than once.
-                    // If you change the ForEach below to ForEach(self.DeviceIdeas, id: \.ideaTitle), it will work,
-                    // but this feels "wrong"...
-                    
-                    // Josh Hubbard: Everything I've read says that ForEach's need a unique identifier and this is
-                    // required. Not sure why it should feel wrong. Should SwiftUI handle this internally and hide
-                    // it from the developer? Up for opinion, but quite a few web frameworks work the same way (react
-                    // comes to mind). Regardless, as of right now we need a unique identifier. .self seems to be
-                    // what apple suggests
-                    ForEach(self.DeviceIdeas, id: \.self) { DeviceIdea in
+                    ForEach(self.DeviceIdeas) { DeviceIdea in
                         NavigationLink(destination: EditView(DeviceIdea: DeviceIdea)) {
                             VStack(alignment: .leading) {
                                 Text(DeviceIdea.deviceTitle ?? "")

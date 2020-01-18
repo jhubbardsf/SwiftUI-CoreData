@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		03E760C123D16178001B1AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E760C023D16178001B1AA0 /* AppDelegate.swift */; };
 		03E760C323D16178001B1AA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E760C223D16178001B1AA0 /* SceneDelegate.swift */; };
-		03E760C623D16178001B1AA0 /* DeviceIdeasList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03E760C423D16178001B1AA0 /* DeviceIdeasList.xcdatamodeld */; };
 		03E760C823D16178001B1AA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E760C723D16178001B1AA0 /* ContentView.swift */; };
 		03E760CA23D1617A001B1AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E760C923D1617A001B1AA0 /* Assets.xcassets */; };
 		03E760CD23D1617A001B1AA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E760CC23D1617A001B1AA0 /* Preview Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		03E760BD23D16178001B1AA0 /* DeviceIdeasList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceIdeasList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E760C023D16178001B1AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E760C223D16178001B1AA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03E760C523D16178001B1AA0 /* DeviceIdeasList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeviceIdeasList.xcdatamodel; sourceTree = "<group>"; };
 		03E760C723D16178001B1AA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03E760C923D1617A001B1AA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E760CC23D1617A001B1AA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				03E760C923D1617A001B1AA0 /* Assets.xcassets */,
 				03E760CE23D1617A001B1AA0 /* LaunchScreen.storyboard */,
 				03E760D123D1617A001B1AA0 /* Info.plist */,
-				03E760C423D16178001B1AA0 /* DeviceIdeasList.xcdatamodeld */,
 				03E760CB23D1617A001B1AA0 /* Preview Content */,
 			);
 			path = DeviceIdeasList;
@@ -167,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E760C123D16178001B1AA0 /* AppDelegate.swift in Sources */,
-				03E760C623D16178001B1AA0 /* DeviceIdeasList.xcdatamodeld in Sources */,
 				03E760DC23D16343001B1AA0 /* DeviceIdea.swift in Sources */,
 				03E760C823D16178001B1AA0 /* ContentView.swift in Sources */,
 				03E760DE23D16634001B1AA0 /* EditView.swift in Sources */,
@@ -368,16 +364,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		03E760C423D16178001B1AA0 /* DeviceIdeasList.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				03E760C523D16178001B1AA0 /* DeviceIdeasList.xcdatamodel */,
-			);
-			currentVersion = 03E760C523D16178001B1AA0 /* DeviceIdeasList.xcdatamodel */;
-			path = DeviceIdeasList.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		03E760D823D1626C001B1AA0 /* DeviceIdea.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
